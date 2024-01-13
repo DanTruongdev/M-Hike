@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddHikeActivity">
+
+    <!--    text view -->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="-16dp"
+        tools:layout_editor_absoluteY="29dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/btnUpdateHike"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="15dp"
+                android:text="Update"
+                android:background="@drawable/round_corner_blue"
+                app:strokeWidth="50dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.144"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edtDescription2"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <Button
+                android:id="@+id/btnDeleteHike"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="15dp"
+                android:text="Delete"
+                android:background="@drawable/round_corner_red"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.86"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edtDescription2"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <Button
+                android:id="@+id/btnViewObservation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="15dp"
+                android:text="Observations"
+                android:background="@drawable/round_corner_yellow"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edtDescription2" />
+
+            <TextView
+                android:id="@+id/tvHours2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="33dp"
+                android:text="h"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/edtHours2"
+                app:layout_constraintTop_toBottomOf="@+id/tvEstimatedTime2" />
+
+            <TextView
+                android:id="@+id/tvActualHours"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="33dp"
+                android:text="h"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/edtActualHours"
+                app:layout_constraintTop_toBottomOf="@+id/tvActualTime" />
+
+            <TextView
+                android:id="@+id/tvActualMinute"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="33dp"
+                android:text="m"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/edtActualMinutes"
+                app:layout_constraintTop_toBottomOf="@+id/tvActualTime" />
+
+            <TextView
+                android:id="@+id/tvActualSecond"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="33dp"
+                android:layout_marginEnd="8dp"
+                android:text="s"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/edtActualSeconds"
+                app:layout_constraintTop_toBottomOf="@+id/tvActualTime" />
+
+            <TextView
+                android:id="@+id/tvEstimatedTime2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Estiamted Competion Time:"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.152"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rdgLevel2" />
+
+            <TextView
+                android:id="@+id/tvActualTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Actual Competion Time:"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.13"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edtMinutes2" />
+
+            <TextView
+                android:id="@+id/tvDescription2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Description:"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.078"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edtActualHours" />
+
+            <TextView
+                android:id="@+id/tvMinutes2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="33dp"
+                android:text="m"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/edtMinutes2"
+                app:layout_constraintTop_toBottomOf="@+id/tvEstimatedTime2" />
+
+            <TextView
+                android:id="@+id/tvSeconds2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="34dp"
+                android:layout_marginEnd="8dp"
+                android:text="s"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/edtSeconds2"
+                app:layout_constraintTop_toBottomOf="@+id/tvEstimatedTime2" />
+
+            <TextView
+                android:id="@+id/tvHikeName2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Hike Name:"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.101"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvLocation2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Location:"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.094"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edtHikeName2" />
+
+            <TextView
+                android:id="@+id/tvDateOfHike2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Date Of Hike:"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.103"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edtLocation2" />
+
+            <!--    edit text-->
+
+            <TextView
+                android:id="@+id/tvParkingAvailable2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Parking Available:"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.113"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edtDateOfHike2" />
+
+            <TextView
+                android:id="@+id/tvHIkeLength2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Length of Hike:"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.106"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvParkingAvailable2" />
+
+            <TextView
+                android:id="@+id/tvLevelOfHike2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Level of Hike:"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.109"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvHIkeLength2" />
+
+            <TextView
+                android:id="@+id/tvKm2"
+                android:layout_width="29dp"
+                android:layout_height="22dp"
+                android:layout_marginTop="33dp"
+                android:text="km"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/edtLengthHike2"
+                app:layout_constraintTop_toBottomOf="@+id/tvParkingAvailable2" />
+
+            <EditText
+                android:id="@+id/edtHikeName2"
+                android:layout_width="325dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:ems="10"
+                android:hint="Enter Hike Name"
+                android:inputType="text"
+                android:textSize="22dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.366"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvHikeName2" />
+
+            <EditText
+                android:id="@+id/edtLocation2"
+                android:layout_width="325dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:ems="10"
+                android:hint="Enter location"
+                android:inputType="text"
+                android:textSize="22dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.366"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvLocation2" />
+
+            <EditText
+                android:id="@+id/edtDateOfHike2"
+                android:layout_width="325dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:ems="10"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:hint="Enter Date of Hike"
+                android:inputType="date"
+                android:textSize="22dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.372"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvDateOfHike2" />
+
+            <Spinner
+                android:id="@+id/spnParkingAvailable2"
+                android:layout_width="wrap_content"
+                android:layout_height="49dp"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="8dp"
+                android:spinnerMode="dropdown"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.128"
+                app:layout_constraintStart_toEndOf="@+id/tvParkingAvailable2"
+                app:layout_constraintTop_toBottomOf="@+id/edtDateOfHike2" />
+
+            <EditText
+                android:id="@+id/edtLengthHike2"
+                android:layout_width="116dp"
+                android:layout_height="62dp"
+                android:layout_marginTop="48dp"
+                android:ems="10"
+                android:gravity="bottom|right"
+                android:hint="Length"
+                android:inputType="number"
+                android:textSize="22dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.263"
+                app:layout_constraintStart_toEndOf="@+id/tvHIkeLength2"
+                app:layout_constraintTop_toBottomOf="@+id/edtDateOfHike2" />
+
+            <EditText
+                android:id="@+id/edtHours2"
+                android:layout_width="106dp"
+                android:layout_height="58dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="12dp"
+                android:ems="10"
+                android:gravity="bottom|right|end"
+                android:hint="Hours"
+                android:inputType="number"
+                android:textSize="22dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvEstimatedTime2" />
+
+            <EditText
+                android:id="@+id/edtActualMinutes"
+                android:layout_width="106dp"
+                android:layout_height="58dp"
+                android:layout_marginTop="8dp"
+                android:ems="10"
+                android:gravity="bottom|right"
+                android:hint="Minutes"
+                android:inputType="number"
+                android:textSize="22dp"
+                app:layout_constraintStart_toEndOf="@+id/tvActualHours"
+                app:layout_constraintTop_toBottomOf="@+id/tvActualTime" />
+
+            <EditText
+                android:id="@+id/edtActualSeconds"
+                android:layout_width="106dp"
+                android:layout_height="58dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="5dp"
+                android:ems="10"
+                android:gravity="bottom|right|end"
+                android:hint="Seconds"
+                android:inputType="number"
+                android:textSize="22dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/tvActualMinute"
+                app:layout_constraintTop_toBottomOf="@+id/tvActualTime" />
+
+            <EditText
+                android:id="@+id/edtActualHours"
+                android:layout_width="106dp"
+                android:layout_height="58dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:ems="10"
+                android:gravity="bottom|right"
+                android:hint="Hours"
+                android:inputType="number"
+                android:textSize="22dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvActualTime" />
+
+            <EditText
+                android:id="@+id/edtSeconds2"
+                android:layout_width="106dp"
+                android:layout_height="62dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="5dp"
+                android:ems="10"
+                android:gravity="bottom|right|end"
+                android:hint="Seconds"
+                android:inputType="number"
+                android:textSize="22dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/tvMinutes2"
+                app:layout_constraintTop_toBottomOf="@+id/tvEstimatedTime2" />
+
+            <EditText
+                android:id="@+id/edtMinutes2"
+                android:layout_width="106dp"
+                android:layout_height="62dp"
+                android:layout_marginTop="8dp"
+                android:ems="10"
+                android:gravity="bottom|right|end"
+                android:hint="Minutes"
+                android:inputType="number"
+                android:textSize="22dp"
+                app:layout_constraintStart_toEndOf="@+id/tvHours2"
+                app:layout_constraintTop_toBottomOf="@+id/tvEstimatedTime2" />
+
+            <RadioGroup
+                android:id="@+id/rdgLevel2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.37"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvLevelOfHike2">
+
+                <RadioButton
+                    android:id="@+id/rdEasy2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="true"
+                    android:buttonTint="@color/easy"
+                    android:text="Easy" />
+
+                <RadioButton
+                    android:id="@+id/rdMedium2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/medium"
+                    android:text="Medium" />
+
+                <RadioButton
+                    android:id="@+id/rdHard2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/hard"
+                    android:text="Hard" />
+
+                <RadioButton
+                    android:id="@+id/rdInsane2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/insane"
+                    android:text="Insane" />
+            </RadioGroup>
+
+            <EditText
+                android:id="@+id/edtDescription2"
+                android:layout_width="330dp"
+                android:layout_height="184dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="15dp"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="Enter description here..."
+                android:inputType="textMultiLine"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvDescription2" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
